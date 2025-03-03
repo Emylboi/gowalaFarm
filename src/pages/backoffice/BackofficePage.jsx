@@ -1,8 +1,11 @@
+import { Outlet } from "react-router-dom";
+import BONavigation from "../../components/backoffice/Navigation/BONavigation";
+
 const BackofficePage = () => {
   return (
     <div>
-      <h1>Backoffice</h1>
-      <p>This is the backoffice page.</p>
+      <BONavigation/>
+      <Outlet></Outlet>
     </div>
   );
 };

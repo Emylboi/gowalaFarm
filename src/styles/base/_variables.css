@@ -1,19 +1,14 @@
 :root {
 
 
-    --font-zenloop: "Zen Loop";
-    --font-nanum: "Nanum Gothic";
+    --font-frankRuhlLibre: "Frank Ruhl Libre";
 
-    --primary-font: var(--font-zenloop);
-    --secondary-font: var(--font-nanum);
+    --primary-font: var(--font-frankRuhlLibre);
 
     /* Background colors */
-    --sectionDescription-color : #33626c; 
-    --sectionDescriptionButton-color : #829b97;
-    --sectionTitleBox-color : #c5b496;
-    --sectionFooter-color : #2a4f57;
-    --sectionNavigation-color : #808080;
-    --sectionShowNavigation-color : #637874;
+    --green-color : #5e9a13; 
+    --greyBackground-color : #eff4f8;
+
 
     /* Text colors */
     --whiteFont-color : #fff;

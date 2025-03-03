@@ -5,12 +5,8 @@
 }
 
 /* FONTS */
-.zenloop {
-    font-family: var(--zenloop);
-}
-
-.nanum {
-    font-family: var(--font-nanum);
+.frankRuhlLibre {
+    font-family: var(--font-frankRuhlLibre);
 }
 
 
