@@ -16,6 +16,7 @@ import BackofficeEmployeesPage from "./pages/backoffice/backofficePages/Backoffi
 import BoEmployeesForm from "./components/backoffice/Employees/outlet/BoEmployeesForm";
 import BoArticlesForm from "./components/backoffice/Articles/outlet/BoArticlesForm";
 import BackofficeArticlesPage from "./pages/backoffice/backofficePages/BackofficeArticlesPage";
+import Footer from "./components/commonComponents/Footer/Footer";
 
 function App() {
   const { signedIn } = useAuth();
@@ -112,6 +113,7 @@ function App() {
       <div>
         <Header />
         <div className="globale-page-wrapper">{routes}</div>
+        <Footer/>
       </div>
     </>
   );

@@ -1,0 +1,9 @@
+.textField{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    text-align: center;
+    padding: 100px 20px;
+    gap: 20px;
+}

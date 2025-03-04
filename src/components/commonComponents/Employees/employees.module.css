@@ -1,0 +1,10 @@
+.employees{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    gap: 25px;
+    background-color: #f0f5f9;
+}

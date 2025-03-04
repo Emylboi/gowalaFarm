@@ -1,0 +1,43 @@
+.employee {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Push the text towards the bottom */
+    align-items: center;
+    transition: background 0.3s ease-in-out;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.106);
+    border: 10px solid #f0f5f9;
+  }
+  
+  .name {
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    font-size: 2.5rem;
+    background-color: #ffffffc8;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .text {
+    width: 100%;
+    font-size: 2rem;
+    opacity: 0; /* Text is hidden by default */
+    transition: opacity 0.3s ease;
+    text-align: center;
+    background-color: #ffffffc8;
+    color: #000;
+  }
+  
+  .employee:hover .text {
+    opacity: 1; /* Text becomes visible on hover */
+  }
+  

@@ -1,0 +1,47 @@
+.product{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    gap: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.106);
+    border: 5px solid white;
+    background-color: var(--greyBackground-color);
+    color: var(--green-color);
+    padding: 0 0 50px 0;
+}
+
+.discountContainer{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.discount{
+    background-color: var(--green-color);
+    color: var(--whiteFont-color);
+    width: 40px;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.title{
+    color: #000;
+}
+
+.price{
+    font-size: 200%;
+    font-weight: 500;
+}
+
+.button{
+    width: 200px;
+    background-color: var(--green-color);
+    color: var(--whiteFont-color);
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}

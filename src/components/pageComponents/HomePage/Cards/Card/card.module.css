@@ -1,0 +1,15 @@
+.container {
+  width: 100%;
+}
+
+.card {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  padding: 40px 10px;
+  gap: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.211);
+  text-align: center;
+}
