@@ -5,21 +5,33 @@ const ContactForm = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [description, setDescription] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const messageData = {
+      name,
+      email,
+      description,
+    };
+
     try {
       const res = await fetch("http://localhost:3042/message", {
         method: "POST",
-        body: JSON.stringify({ name, email, message }),
-        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(messageData),
+        headers: {
+          "Content-Type": "application/json", // Tell the server we are sending raw JSON
+        },
       });
+
       if (res.ok) {
-        setIsSubmitted(true);
+        setIsSubmitted(true); // Show success message if the request was successful
+      } else {
+        console.error("Error:", res.statusText); // Handle error
       }
-    } catch {
-      console.log("Error");
+    } catch (error) {
+      console.log("Error:", error); // Handle network error
     }
   };
 
@@ -52,9 +64,9 @@ const ContactForm = () => {
               required
             />
             <textarea
-              name="message"
+              name="description"
               placeholder="Din Besked"
-              onChange={(e) => setMessage(e.target.value)}
+              onChange={(e) => setDescription(e.target.value)}
               required
             ></textarea>
             <button type="submit">Send besked</button>

@@ -14,6 +14,7 @@ const BackofficeMessagesPage = () => {
   
     const headers = {
       Authorization: `Bearer ${token}`, // Include token in Authorization header
+      'Content-Type': 'application/json',
     };
   
     useEffect(() => {
@@ -30,7 +31,7 @@ const BackofficeMessagesPage = () => {
         let response = await fetch("http://localhost:3042/message", {
           // Fetches the data from the API server with the /message endpoint.
           method: "POST", // Method is POST, because we are posting data to the server.
-          body: formData, // We are posting data from a form.
+          body: JSON.stringify(formData), // We are posting data from a form.
           headers,
         });
   
@@ -65,7 +66,7 @@ const BackofficeMessagesPage = () => {
         let response = await fetch("http://localhost:3042/message", {
           // Fetches the data from the API server with the /message endpoint.
           method: "PUT", // Method is PUT, because we are updating data in the server.
-          body: formData, // We are updating data from a form.
+          body: JSON.stringify(formData), // We are updating data from a form.
           headers,
         });
   
@@ -88,7 +89,7 @@ const BackofficeMessagesPage = () => {
       ></BoMessageList>
       <br />
       <br />
- {/*      <Outlet context={[messages, addMessage, updateMessage]}></Outlet> */}
+      <Outlet context={[messages, addMessage, updateMessage]}></Outlet>
     </div>
   );
 }

@@ -18,6 +18,12 @@ import BoArticlesForm from "./components/backoffice/Articles/outlet/BoArticlesFo
 import BackofficeArticlesPage from "./pages/backoffice/backofficePages/BackofficeArticlesPage";
 import Footer from "./components/commonComponents/Footer/Footer";
 import BackofficeMessagesPage from "./pages/backoffice/backofficePages/BackofficeMessagesPage";
+import BackofficeOrdersPage from "./pages/backoffice/backofficePages/BackofficeOrdersPage";
+import BoOrdersForm from "./components/backoffice/Orders/outlet/BoOrdersForm";
+import BackofficeUsersPage from "./pages/backoffice/backofficePages/BackofficeUsersPage";
+import BoUsersForm from "./components/backoffice/Users/outlet/BoUsersForm";
+import BackofficeSubscriptionsPage from "./pages/backoffice/backofficePages/BackofficeSubscriptionsPage";
+import BoSubscriptionsForm from "./components/backoffice/Subscriptions/outlet/BoSubscriptionsForm";
 
 function App() {
   const { signedIn } = useAuth();
@@ -108,6 +114,48 @@ function App() {
         {
           path: "/backoffice/messages",
           element: <BackofficeMessagesPage />,
+        },
+        {
+          path: "/backoffice/orders",
+          element: <BackofficeOrdersPage />,
+          children: [
+            {
+              path: "/backoffice/orders/add",
+              element: <BoOrdersForm />,
+            },
+            {
+              path: "/backoffice/orders/edit/:id",
+              element: <BoOrdersForm />,
+            },
+          ],
+        },
+        {
+          path: "/backoffice/users",
+          element: <BackofficeUsersPage />,
+          children: [
+            {
+              path: "/backoffice/users/add",
+              element: <BoUsersForm />,
+            },
+            {
+              path: "/backoffice/users/edit/:id",
+              element: <BoUsersForm />,
+            },
+          ],
+        },
+        {
+          path: "/backoffice/subscriptions",
+          element: <BackofficeSubscriptionsPage />,
+          children: [
+            {
+              path: "/backoffice/subscriptions/add",
+              element: <BoSubscriptionsForm />,
+            },
+            {
+              path: "/backoffice/subscriptions/edit/:id",
+              element: <BoSubscriptionsForm />,
+            },
+          ],
         },
       ],
     },
