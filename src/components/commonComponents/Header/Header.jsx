@@ -1,12 +1,13 @@
+import { Link } from "react-router-dom";
 import Navigation from "./Navigation/Navigation";
 import styles from "./header.module.css";
 
 const Header = () => {
   return (
     <div className={styles.header}>
-      <div className={styles.leftSide}>
-        <img src="./logo.png" alt="" />
-      </div>
+      <Link to="/">
+        <img src="./logo.png" alt="Logo" />
+      </Link>
       <div className={styles.rightSide}>
         <Navigation />
         {/* CART */}

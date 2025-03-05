@@ -1,8 +1,13 @@
+import Hero from "../../../components/commonComponents/Hero/Hero";
+import Newsletter from "../../../components/commonComponents/Newsletter/Newsletter";
+import Articles from "../../../components/pageComponents/ServicesPage/Articles";
+
 const ServicesPage = () => {
   return (
     <div>
-      <h1>Services Page</h1>
-      <p>Welcome to the Services Page</p>
+      <Hero title="Gowala tilbyder" text="Hvad vi tilbyder vores forbrugere"/>
+      <Articles/>
+      <Newsletter/>
     </div>
   );
 };

@@ -17,6 +17,7 @@ import BoEmployeesForm from "./components/backoffice/Employees/outlet/BoEmployee
 import BoArticlesForm from "./components/backoffice/Articles/outlet/BoArticlesForm";
 import BackofficeArticlesPage from "./pages/backoffice/backofficePages/BackofficeArticlesPage";
 import Footer from "./components/commonComponents/Footer/Footer";
+import BackofficeMessagesPage from "./pages/backoffice/backofficePages/BackofficeMessagesPage";
 
 function App() {
   const { signedIn } = useAuth();
@@ -103,6 +104,10 @@ function App() {
               element: <BoArticlesForm />,
             },
           ],
+        },
+        {
+          path: "/backoffice/messages",
+          element: <BackofficeMessagesPage />,
         },
       ],
     },

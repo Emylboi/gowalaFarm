@@ -36,6 +36,13 @@ const BONavigation = () => {
           >
             {icons["FaProductHunt"]} <span className={styles.title}>Articles</span>
           </NavLink>
+
+          <NavLink
+            to="/backoffice/messages"
+            className={({ isActive }) => (isActive ? styles.active : null)}
+          >
+            {icons["FaProductHunt"]} <span className={styles.title}>Messages</span>
+          </NavLink>
         </div>
         
       </div>

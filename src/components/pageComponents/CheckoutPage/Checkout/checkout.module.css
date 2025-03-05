@@ -1,0 +1,21 @@
+.container{
+    width: 100%;
+}
+
+.content{
+    margin: 20px;
+    background-color: #eff4f8;
+}
+
+.yourOrder{
+    width: 100%;
+}
+
+.topPart{
+    width: 80%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row;
+}

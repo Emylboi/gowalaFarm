@@ -1,0 +1,25 @@
+.container{
+    width: 100%;
+}
+
+.content{
+    margin: 30px;
+    padding: 20px;
+    background-color: #eff4f8;
+    text-align: center;
+}
+
+.title{
+    font-size: 2.5rem;
+}
+
+.form > input, .form > textarea{
+    font-size: 2rem;
+}
+
+.form > button{
+    background-color: var(--green-color);
+    color: var(--whiteFont-color);
+    border-radius: 0px;
+    width: 100%;
+}

@@ -1,0 +1,41 @@
+.container{
+    width: 100%;
+}
+
+.content{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    gap: 20px;
+    font-size: 2rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.211);
+    padding: 10px;
+}
+
+.h2text{
+    width: 100%;
+    font-size: 2.5rem;
+}
+
+.text{
+    width: 100%;
+    font-size: 2rem;
+}
+
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-flow: column wrap;
+    gap: 2vh;
+}
+
+.infoItem{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
