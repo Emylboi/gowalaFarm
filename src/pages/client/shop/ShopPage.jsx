@@ -13,7 +13,7 @@ const ShopPage = () => {
         boldTitle={true}
       />
       {/* Sort component? */}
-      <Products/>
+      <Products sort={true}/>
     </div>
   );
 };

@@ -7,3 +7,18 @@
     flex-flow: column wrap;
     gap: 25px;
 }
+
+.sortContainer{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 10px;
+    background-color: #eff4f8;
+}
+
+.sortButton{
+    color: var(--green-color);
+    font-size: 5rem;
+    height: 100%;
+}

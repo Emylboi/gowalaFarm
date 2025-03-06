@@ -16,6 +16,10 @@
     }
   }
   
+  .welcome{
+    font-size: 2rem;
+  }
+
   .navigation {
     padding: 40px 20px;
     display: flex;

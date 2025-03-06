@@ -1,21 +1,124 @@
-.container{
+.container {
+  width: 100%;
+}
+
+.content {
+  margin: 20px;
+  background-color: #eff4f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  gap: 15px;
+  padding: 15px;
+}
+
+.yourOrder {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+.topPart {
+  width: 80%;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.imageContainer {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.productImage {
+  width: 75px;
+  height: 75px;
+}
+
+.contentContainer {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-flow: column;
+  gap: 10px;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.quantityControls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.removeContainer {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.button {
+  color: var(--green-color);
+  font-size: 2.5rem;
+}
+
+.bottomPart {
+  background-color: #fff;
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 10px;
+}
+
+.productPrice {
+  font-size: 2rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.green {
+  color: var(--green-color);
+}
+
+.totalPriceContainer {
+  background-color: #fff;
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 5px;
+}
+
+.totalPrice {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.submitButton{
     width: 100%;
-}
-
-.content{
-    margin: 20px;
-    background-color: #eff4f8;
-}
-
-.yourOrder{
-    width: 100%;
-}
-
-.topPart{
-    width: 80%;
-    background-color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: row;
+    height: 50px;
+    color: #fff;
+    background-color: var(--green-color);
+    border-radius: 0px;
+    padding: 10px;
 }

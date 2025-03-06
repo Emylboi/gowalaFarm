@@ -1,4 +1,7 @@
 import styles from "./footer.module.css";
+import { FaPhoneAlt } from "react-icons/fa";
+import { MdWatchLater } from "react-icons/md";
+import { FaLocationDot } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -12,21 +15,21 @@ const Footer = () => {
         </p>
         <div className={styles.info}>
           <div className={styles.infoItem}>
-            <img src="/logo.png" alt="" />
+            <FaPhoneAlt className={styles.footerIcon}/>
             <div className={styles.flex}>
               <p>+88130-589-745-6987</p>
               <p>+1655-456-532</p>
             </div>
           </div>
           <div className={styles.infoItem}>
-            <img src="/logo.png" alt="" />
+            <MdWatchLater className={styles.footerIcon}/>
             <div className={styles.flex}>
               <p>Man - Fre 09:00 - 18:00</p>
               <p>(undtagen helligdage)</p>
             </div>
           </div>
           <div className={styles.infoItem}>
-            <img src="/logo.png" alt="" />
+            <FaLocationDot className={styles.footerIcon}/>
             <div className={styles.flex}>
               <p>Mejerigade 14</p>
               <p>Mejeby</p>

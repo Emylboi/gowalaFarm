@@ -29,6 +29,11 @@
     gap: 20px;
 }
 
+.footerIcon{
+    color: var(--green-color);
+    font-size: 250%;
+}
+
 .buttomPart{
     width: 100%;
     height: 35vh;

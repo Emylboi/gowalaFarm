@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "./newsletter.module.css";
+import NewsletterConfirmation from "./NewsletterConfirmation/NewsletterConfirmation";
 
 const Newsletter = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -31,7 +32,9 @@ const Newsletter = () => {
     }
   };
 
-  return (
+  return isSubmitted ? (
+    <NewsletterConfirmation email={email} />
+  ) : (
     <section className={styles.container}>
       <div className={styles.background}>
         <div className={styles.text}>
@@ -44,26 +47,18 @@ const Newsletter = () => {
             sker på farmen.
           </p>
         </div>
-        {isSubmitted ? (
-          <div className={styles.successMessage}>
-            <h2>
-              {email} <br/ >er blevet tilmeldt nyhedsbrevet!
-            </h2>
-          </div>
-        ) : (
-          <form className={styles.form} onSubmit={handleSubmit}>
-            <input
-              type="email"
-              name="email"
-              placeholder="Din Email"
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-            <button type="submit" className={styles.button}>
-              Tilmeld
-            </button>
-          </form>
-        )}
+        <form className={styles.form} onSubmit={handleSubmit}>
+          <input
+            type="email"
+            name="email"
+            placeholder="Din Email"
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <button type="submit" className={styles.button}>
+            Tilmeld
+          </button>
+        </form>
       </div>
     </section>
   );

@@ -68,7 +68,7 @@ const BONavigation = () => {
         
       </div>
       <div className={styles.welcomeMSG}>
-        <h1>Hej {user.name}</h1>
+        <h1 className={styles.welcome}>Hej {user.name} - Rolle: {user.role}</h1>
         <button onClick={() => signOut()}>Log Ud</button>
       </div>
     </div>

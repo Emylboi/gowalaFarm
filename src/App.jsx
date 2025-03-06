@@ -26,7 +26,7 @@ import BackofficeSubscriptionsPage from "./pages/backoffice/backofficePages/Back
 import BoSubscriptionsForm from "./components/backoffice/Subscriptions/outlet/BoSubscriptionsForm";
 
 function App() {
-  const { signedIn } = useAuth();
+  const { signedIn, user } = useAuth();
 
   const routes = useRoutes([
     {
@@ -64,7 +64,7 @@ function App() {
     {
       path: "/backoffice",
       element: (
-        <ProtectedRoute isAllowed={signedIn}>
+        <ProtectedRoute isAllowed={signedIn} role={user?.role}>
           <BackofficePage />
         </ProtectedRoute>
       ),

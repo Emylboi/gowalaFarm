@@ -6,6 +6,7 @@ const Login = () => {
 
   return (
     <div className={styles.container}>
+      <h1>Log Ind</h1>
       <form onSubmit={signIn} className={styles.form}>
         {error && <p style={{ color: "red" }}>{error}</p>}
         <input
@@ -20,7 +21,7 @@ const Login = () => {
           placeholder="Password"
         />
 
-        <button type="submit">Log ind</button>
+        <button className={styles.login} type="submit">Log ind</button>
       </form>
     </div>
   );

@@ -30,6 +30,7 @@
     align-items: flex-start;
     flex-flow: column wrap;
     gap: 2vh;
+    font-size: 2rem;
 }
 
 .infoItem{
@@ -38,4 +39,9 @@
     justify-content: flex-start;
     align-items: center;
     gap: 20px;
+}
+
+.contactIcon{
+    color: var(--green-color);
+    font-size: 200%;
 }

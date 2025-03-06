@@ -1,4 +1,7 @@
 import styles from "./contactInfo.module.css";
+import { FaPhoneAlt } from "react-icons/fa";
+import { MdWatchLater } from "react-icons/md";
+import { FaLocationDot } from "react-icons/fa6";
 
 const ContactInfo = () => {
   return (
@@ -15,21 +18,21 @@ const ContactInfo = () => {
         </div>
         <div className={styles.info}>
           <div className={styles.infoItem}>
-            <img src="/logo.png" alt="" />
+            <FaPhoneAlt className={styles.contactIcon}/>
             <div className={styles.flex}>
               <p>+88130-589-745-6987</p>
               <p>+1655-456-532</p>
             </div>
           </div>
           <div className={styles.infoItem}>
-            <img src="/logo.png" alt="" />
+          <MdWatchLater className={styles.contactIcon}/>
             <div className={styles.flex}>
               <p>Man - Fre 09:00 - 18:00</p>
               <p>(except public holidays)</p>
             </div>
           </div>
           <div className={styles.infoItem}>
-            <img src="/logo.png" alt="" />
+          <FaLocationDot className={styles.contactIcon}/>
             <div className={styles.flex}>
               <p>25/2 Lane2 Vokte Street Building</p>
               <p>Melborn City</p>
