@@ -3,6 +3,7 @@ import styles from "./boNavigation.module.css";
 import { icons } from "../../../services/icons";
 import useAuth from "../../../hooks/useAuth";
 
+// Backoffice Navigation
 const BONavigation = () => {
     const { signOut, user } = useAuth();
 

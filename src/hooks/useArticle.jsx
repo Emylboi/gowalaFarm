@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import useTinyFetch from "./tinyFetch.hook";
 
-/* Used to fetch the one article that is used on About page. */
+// Used to fetch the one article that is used on About page.
 const useArticle = (title) => {
   const [article, setArticle] = useState(null);
   const { data, fetchData, loading, error, noDataMessage } = useTinyFetch();

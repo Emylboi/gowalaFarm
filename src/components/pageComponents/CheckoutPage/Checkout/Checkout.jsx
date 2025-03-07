@@ -2,9 +2,11 @@ import styles from "./checkout.module.css";
 import { useLocalStorage } from "@uidotdev/usehooks";
 import { FaCircleMinus, FaCirclePlus, FaCircleXmark } from "react-icons/fa6";
 
+// Checkout / Cart component
 const Checkout = () => {
   const [cart, setCart] = useLocalStorage("cart", []);
 
+  //Function to update the quantity of a product in the cart
   const updateQuantity = (id, delta) => {
     setCart((prevCart) =>
       prevCart.map((item) =>
@@ -15,6 +17,7 @@ const Checkout = () => {
     );
   };
 
+  //Function to remove item from the cart
   const removeItem = (id) => {
     setCart((prevCart) =>
       prevCart.filter((item) => item._id !== id && item.id !== id)

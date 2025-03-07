@@ -64,7 +64,7 @@ const Navigation = () => {
           Checkout
         </NavLink>
 
-        {/* Shows Login if user is not logged in, and logout if user is logged in! */}
+        {/* Shows Login if user is not logged in, and logout if user is logged in */}
         {!user || Object.keys(user).length === 0 ? (
           <NavLink
             to="/login"

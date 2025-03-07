@@ -3,6 +3,7 @@ import { jwtDecode } from "jwt-decode";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+//Hook used to authenticate the user
 const useAuth = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -11,7 +12,7 @@ const useAuth = () => {
   const [auth, setAuth] = useLocalStorage("auth", {});
   const navigate = useNavigate();
 
-  /* Function that handles the signin */
+  // Function that handles the signin
   const signIn = async (e) => {
     e.preventDefault();
     setError("");
@@ -40,13 +41,13 @@ const useAuth = () => {
     }
   };
 
-  /* Function that handles the signout */
+  // Function that handles the signout
   const signOut = () => {
     setAuth({});
     setUser({});
   };
 
-  /* Returns the token from the auth user if it exists. */
+  // Returns the token from the auth user if it exists.
   const token = auth.token ? auth.token : "";
   const signedIn = !!auth.token;
 

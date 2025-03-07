@@ -32,6 +32,7 @@ const Newsletter = () => {
     }
   };
 
+  //If the form was successfully filled, then show the confirmation component (so the user knows they're signed up), otherwise show the form for subscription
   return isSubmitted ? (
     <NewsletterConfirmation email={email} />
   ) : (

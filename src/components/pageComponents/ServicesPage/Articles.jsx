@@ -3,6 +3,7 @@ import useTinyFetch from "../../../hooks/tinyFetch.hook";
 import Article from "./Article/Article";
 import styles from "./articles.module.css";
 
+//All Articles
 const Articles = () => {
   const [articles, setArticles] = useState([]);
 
@@ -24,7 +25,7 @@ const Articles = () => {
 
       {articles.length > 0 &&
         articles
-        //Filter out the Article that is used on "About Us"
+        //Filter out the Article that is used on the"About Us" page.
           .filter((article) => article.title !== "Om Gowala Farms")
           .map((article) => <Article key={article._id} article={article} />)}
     </div>

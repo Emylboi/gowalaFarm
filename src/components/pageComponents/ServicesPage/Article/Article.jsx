@@ -1,6 +1,7 @@
 import { IoMdCheckmarkCircle } from "react-icons/io";
 import styles from "./article.module.css";
 
+//Single Article
 const Article = ({ article }) => {
   const { title, description, list, image } = article;
   return (

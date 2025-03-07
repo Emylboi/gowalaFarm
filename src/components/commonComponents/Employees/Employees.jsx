@@ -3,6 +3,7 @@ import Employee from "./Employee/Employee";
 import useTinyFetch from "../../../hooks/tinyFetch.hook";
 import styles from "./employees.module.css";
 
+//All Employees component
 const Employees = () => {
   const [employees, setEmployees] = useState([]);
 

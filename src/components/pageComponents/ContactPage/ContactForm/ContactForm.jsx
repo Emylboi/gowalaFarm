@@ -21,17 +21,17 @@ const ContactForm = () => {
         method: "POST",
         body: JSON.stringify(messageData),
         headers: {
-          "Content-Type": "application/json", // Tell the server we are sending raw JSON
+          "Content-Type": "application/json",
         },
       });
 
       if (res.ok) {
-        setIsSubmitted(true); // Show success message if the request was successful
+        setIsSubmitted(true);
       } else {
-        console.error("Error:", res.statusText); // Handle error
+        console.error("Error:", res.statusText);
       }
     } catch (error) {
-      console.log("Error:", error); // Handle network error
+      console.log("Error:", error);
     }
   };
 
@@ -39,6 +39,7 @@ const ContactForm = () => {
     <section className={styles.container}>
       <div className={styles.content}>
         <h3 className={styles.title}>Send en besked til os</h3>
+        {/* If form was submitted, we show a success message. */}
         {isSubmitted ? (
           <div className={styles.successMessage}>
             <h2>
@@ -52,8 +53,8 @@ const ContactForm = () => {
               type="text"
               name="name"
               placeholder="Dit Navn"
-              value={name} // Bind input value to state
-              onChange={(e) => setName(e.target.value)} // Update name state on input change
+              value={name} 
+              onChange={(e) => setName(e.target.value)}
               required
             />
             <input

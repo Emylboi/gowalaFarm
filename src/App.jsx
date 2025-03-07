@@ -64,6 +64,7 @@ function App() {
     {
       path: "/backoffice",
       element: (
+        //You're only able to navigate to backoffice, if you're signed in and your user role is "admin".
         <ProtectedRoute isAllowed={signedIn} role={user?.role}>
           <BackofficePage />
         </ProtectedRoute>
@@ -166,7 +167,7 @@ function App() {
       <div>
         <Header />
         <div className="globale-page-wrapper">{routes}</div>
-        <Footer/>
+        <Footer />
       </div>
     </>
   );

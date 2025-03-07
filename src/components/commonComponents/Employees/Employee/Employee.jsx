@@ -1,5 +1,6 @@
 import styles from "./employee.module.css";
 
+//Single Employee component
 const Employee = ({ employee }) => {
   const { name, text, image } = employee;
   return (

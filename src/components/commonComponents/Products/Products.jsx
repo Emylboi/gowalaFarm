@@ -12,6 +12,7 @@ const shuffleArray = (array) => {
   return array;
 };
 
+//All Products
 const Products = ({ maxItems = null, randomize = false, sort = false }) => {
   const [products, setProducts] = useState([]);
   const [sorted, setSorted] = useState(false);
@@ -26,12 +27,12 @@ const Products = ({ maxItems = null, randomize = false, sort = false }) => {
     setProducts(data);
   }, [data]);
 
-  // Shuffle the products if randomize is true
+  // Shuffle the products if randomize is true - as needed on homepage
   let processedProducts = randomize
     ? shuffleArray([...products])
     : [...products];
 
-  //If sort is enabled, and sorted is true
+  //If sort is enabled through a prop, and sorted is true
   if (sort && sorted) {
     processedProducts.sort((a, b) => a.title.localeCompare(b.title));
   }
@@ -44,6 +45,7 @@ const Products = ({ maxItems = null, randomize = false, sort = false }) => {
   return (
     <div className={styles.products}>
       <div className={styles.sortContainer}>
+        {/* If sort prop is present, then we show the sorting button. */}
         {sort && (
           <div
             

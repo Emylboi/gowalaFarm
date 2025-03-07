@@ -1,6 +1,7 @@
 import styles from "./product.module.css";
 import { useLocalStorage } from "@uidotdev/usehooks";
 
+//Single product
 const Product = ({ product }) => {
   const { title, price, discount, image, _id, id } = product;
   const [cart, setCart] = useLocalStorage("cart", []);
@@ -14,7 +15,9 @@ const Product = ({ product }) => {
     }
 
     setCart((prevCart) => {
+      //Checks if the product is already in the cart
       const existingProduct = prevCart.find((item) => item._id === productId || item.id === productId);
+      //If the product is already in the cart, we instead add one to the quantity.
       if (existingProduct) {
         return prevCart.map((item) =>
           (item._id === productId || item.id === productId)

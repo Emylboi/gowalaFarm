@@ -12,7 +12,6 @@ const ShopPage = () => {
         text="Her på siden finder du alle vores friske mejeriprodukter og kvalitetskød fra Gowala Farms - direkte fra gården til dit bord."
         boldTitle={true}
       />
-      {/* Sort component? */}
       <Products sort={true}/>
     </div>
   );

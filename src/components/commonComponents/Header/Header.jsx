@@ -4,6 +4,7 @@ import styles from "./header.module.css";
 import { IoMdBasket } from "react-icons/io";
 import { useLocalStorage } from "@uidotdev/usehooks";
 
+//Header component
 const Header = () => {
   const [cart] = useLocalStorage("cart", []);
 
@@ -18,6 +19,7 @@ const Header = () => {
         <Navigation />
         <Link to="/checkout" className={styles.cartContainer}>
           <IoMdBasket className={styles.checkoutIcon} />
+          {/* If there's anything in the cart, quantity is shown at the top of the basket logo. */}
           {totalQuantity > 0 && (
             <span className={styles.cartQuantity}>{totalQuantity}</span>
           )}
