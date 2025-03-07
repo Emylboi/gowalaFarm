@@ -53,7 +53,7 @@ const ContactForm = () => {
               type="text"
               name="name"
               placeholder="Dit Navn"
-              value={name} 
+              value={name}
               onChange={(e) => setName(e.target.value)}
               required
             />
